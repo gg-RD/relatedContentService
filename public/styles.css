@@ -1,0 +1,74 @@
+#relatedContentCarousel{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.shoeWidget:hover {
+  border: 1px solid lightgrey;
+}
+
+.shoeWidget {
+  height: 353px;
+  width: 245px;
+}
+
+#related {
+
+  width: 1190px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+#youMayAlsoLike{
+  display: flex;
+  justify-content: center;
+}
+
+#relatedContentLeftArrow{
+  display: flex;
+  width: 13.515%;
+
+}
+#relatedContentRightArrow{
+  display: flex;
+  margin-top: auto;
+  margin-bottom: auto;
+  justify-content: center;
+
+  width: 11.90%;
+
+}
+#relatedContentLeftArrow{
+  display: flex;
+  margin-top: auto;
+  margin-bottom: auto;
+  justify-content: center;
+  width: 13.515%;
+
+}
+.arrow {
+  height: 16px;
+  width: 12px;
+}
+
+.relatedContentImage {
+  width: 220px;
+  height: 220px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.colorsAmountText{
+  margin-left: 10px;
+  margin-top: 8px;
+  margin-bottom: 0px;
+}
+
+#lowerText{
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+
