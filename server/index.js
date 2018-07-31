@@ -12,7 +12,8 @@ app.post('/shoes', (req, res) => {
 });
 
 app.get('/shoes', (req, res) => {
-  console.log('get shoes got pinged')
+  console.log('get shoes got pinged');
+  res.send('hi');
 });
 
 app.listen(app.get('port'), ()=> {

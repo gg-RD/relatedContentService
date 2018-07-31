@@ -14,7 +14,10 @@ class RelatedContentBar extends React.Component {
     }
   }
   get () {
-
+    axios.get('/shoes').then((data)=> {
+      console.log(data);
+      //set the state in here
+    })
   }
   slideCarouselLeft () {
     console.log('you moved left');
@@ -41,6 +44,7 @@ class RelatedContentBar extends React.Component {
         displayFour: this.state.displayFour
       });
     }
+    this.get();
   }
   render () {
     if (this.state.carouselNumber === 0) {
