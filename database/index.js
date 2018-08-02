@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const fakeData = require('./sampleData.js').fakeData;
 mongoose.connect('mongodb://localhost:27017/relatedContentDB');
 
 
@@ -18,6 +19,17 @@ let shoeSchema = mongoose.Schema({
 
 let Shoe = mongoose.model('Shoe', shoeSchema);
 
+let dbSetup = () => {
+  Shoe.remove({}, ()=> {
+    Shoe.insertMany(fakeData, (err)=> {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log('successfully removed and re-inserted data');
+      }
+    })
+  });
+}
 
 let searchDatabaseById = (id, callback) => {
   let query = {'id': id};
@@ -41,3 +53,4 @@ let searchDatabaseById = (id, callback) => {
 }
 
 module.exports.searchDatabaseById = searchDatabaseById;
+module.exports.dbSetup = dbSetup;
