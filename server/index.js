@@ -1,9 +1,16 @@
+
 const express = require('express');
 const parser = require('body-parser');
 const searchDatabaseById = require('../database/index.js').searchDatabaseById;
+<<<<<<< HEAD
 
 
 
+=======
+
+
+
+>>>>>>> inlineStyleRefactor
 console.log(searchDatabaseById);
 let app = express();
 
@@ -24,4 +31,3 @@ app.get('/shoes', (req, res) => {
 app.listen(app.get('port'), ()=> {
   console.log('connected, listening on port number 3005');
 })
-
