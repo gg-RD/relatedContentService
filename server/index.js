@@ -1,13 +1,11 @@
 
 const express = require('express');
 const parser = require('body-parser');
+
 const databaseImports = require('../database/index.js');
 const searchDatabaseById = databaseImports.searchDatabaseById;
 const dbSetup = databaseImports.dbSetup;
-//
 
-
-console.log(searchDatabaseById);
 let app = express();
 
 app.set('port', 3005);
