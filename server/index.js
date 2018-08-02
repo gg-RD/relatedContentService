@@ -1,27 +1,23 @@
 
 const express = require('express');
 const parser = require('body-parser');
-const searchDatabaseById = require('../database/index.js').searchDatabaseById;
-<<<<<<< HEAD
+const databaseImports = require('../database/index.js');
+const searchDatabaseById = databaseImports.searchDatabaseById;
+const dbSetup = databaseImports.dbSetup;
 
 
 
-=======
-
-
-
->>>>>>> inlineStyleRefactor
 console.log(searchDatabaseById);
 let app = express();
 
 app.set('port', 3005);
 
 
+
 app.use(express.static(__dirname + '/../public'));
 
-app.post('/shoes', (req, res) => {
-  console.log('post shoes got pinged')
-});
+dbSetup();
+
 
 app.get('/shoes', (req, res) => {
   console.log('get shoes got pinged');
